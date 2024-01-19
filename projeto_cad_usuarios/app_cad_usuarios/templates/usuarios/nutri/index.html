@@ -1,0 +1,19 @@
+{% extends 'usuarios/nutri/base-nutri.html' %}
+{% block conteudo %}
+{% load static %}
+
+<div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img src={% static 'img/pos-nutricao-aplicada-estetica.webp' %} class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+    </div>
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Home da Nutrição</h1>
+      <p class="lead">A nutrição desempenha um papel fundamental em nossa saúde e bem-estar. É muito mais do que apenas ingerir alimentos para saciar a fome; é um processo complexo que envolve a escolha de alimentos que fornecem os nutrientes necessários para sustentar a vida. Uma dieta equilibrada não apenas nos dá energia, mas também ajuda a prevenir uma série de doenças crônicas e melhora nossa qualidade de vida.</p>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a href="/nutri/cadastro/" class="btn btn-primary btn-lg px-4 me-md-2">Cadastro</a>
+        <a href="/nutri/pesquisa/" class="btn btn-outline-secondary btn-lg px-4">Pesquisa</a>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
