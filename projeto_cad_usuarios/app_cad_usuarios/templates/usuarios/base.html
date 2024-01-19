@@ -18,106 +18,21 @@
   </head>
 
 <body>
-<!-- Image and text -->
+<!-- Header -->
 <html lang="en">
     <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="/">Trabalho LTD 2023</a>
-            <!-- Sidebar Toggle-->
-            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
-            
-            <!-- Navbar Search-->
-            <form action ="{% url 'resultado_pesquisa' %}" method="post" class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-              {% csrf_token %}
-              <div class="input-group">
-                    <input input name="id_usuario_request" class="form-control" type="text" placeholder="Procurar por nome" aria-label="Procurar por nome" aria-describedby="btnNavbarSearch" />
-                    
-                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
-                </div>
-            </form>
-            
-            <!-- Navbar-->
-            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#!">Settings</a></li>
-                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
-                        <li><hr class="dropdown-divider" /></li>
-                        <li><a class="dropdown-item" href="#!">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-        <div id="layoutSidenav">
-            <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                    <div class="sb-sidenav-menu">
-                        <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Páginas principais</div>
-                            <a class="nav-link" href="/">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-house"></i></div>
-                                Home
-                            </a>
-                            <a class="nav-link" href="/cadastro/">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Cadastro de Usuário
-                              </a>
-                            <a class="nav-link" href="/exibir/">
-                              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                              Exibir usuários
-                            </a>
-
-                            <a class="nav-link" href="/graph/">
-                              <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                              Gráfico de usuários
-                          </a>
-
-                            <a class="nav-link" href="/pesquisa/">
-                              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                              Pesquisa
-                            </a>
-                            <a class="nav-link" href="/deletar_usuario/">
-                              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                              Deletar Usuário
-                            </a>
-                            <a class="nav-link" href="/incluir_especialidade/">
-                              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                              Incluir especialidade
-                            </a>
-
-                            <div class="sb-sidenav-menu-heading">Interface</div>
-                            <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Cursos
-                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                            </a>
-                            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
-                                <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link" href="/fisio/index">Fisioterapia</a>
-                                    <a class="nav-link" href="/edfisica/index">Educação Física</a>
-                                    <a class="nav-link" href="/nutri/index">Nutrição</a>
-                                    <a class="nav-link" href="/psico/index">Psicologia</a>
-                                </nav>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="sb-sidenav-footer">
-                        <div class="small">Logged in as:</div>
-                        Trabalho LTD 2023
-                    </div>
-                </nav>
-            </div>
-            <div id="layoutSidenav_content">
-                <main>
-                    <div class="container-fluid px-4">
-
-                        <ol class="breadcrumb mb-4">
-
-                        </ol>
-
+          <div class="container">
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">O projeto</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+      </ul>
+    </header>
+  </div>
+<!-- Header -->
                             
     {% block conteudo %}
     {% endblock %}
@@ -125,18 +40,27 @@
     <br>
                        
                 </main>
-                <footer class="py-4 bg-light mt-auto">
-                    <div class="container-fluid px-4">
-                        <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted"><a href="https://github.com/ThiagoFigueiroRibeiro/ProjetoCadastro">Nosso Github</a></div>
-                            <div>
-                                <a href="#">Privacy Policy</a>
-                                &middot;
-                                <a href="#">Terms &amp; Conditions</a>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+
+        <!-- footer -->
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+              <p class="col-md-4 mb-0 text-body-secondary">&copy; 2023 Company, Inc</p>
+          
+              <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+              </a>
+          
+              <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+                <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+              </ul>
+            </footer>
+          </div>
+        <!-- footer -->
+
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
@@ -149,11 +73,6 @@
     </body>
 </html>
 
-	<p class="text-center text-body-secondary">
-		<a style="text-decoration: none; color:black;" 
-		href ="https://github.com/ThiagoFigueiroRibeiro/ProjetoCadastro">&copy; Github Trabalho LTD 2023 </a> 
-	</p>
-  </footer>
 </nav>
 
     <!-- Optional JavaScript; choose one of the two! -->
